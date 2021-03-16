@@ -3,8 +3,30 @@
     height: 200px;
     border: 3px white solid;
 }
-i{
-    font-size: 9em;
+.bi-circle{
+    width: 190px;
+    height: 190px;
+    display: inline-block;
+    font-size: 6em;
+    color: white;
+}
+.bi-x{
+    width: 190px;
+    height: 190px;
+    display: inline-block;
+    font-size: 10em;
+    color: white;
+}
+.bi-x::before, .bi-circle::before{
+    vertical-align: 0em;
+    width: 190px;
+    height: 190px;
+}
+.bi-circle::before, .bi-gear::before{
+    vertical-align: -0.4em;
+}
+.bi-gear{
+    font-size: 2em;
 }
 @media (max-width: 1024px){
     .table{
@@ -15,7 +37,37 @@ i{
         height: 100px;
         border: 3px white solid;
     }
-    i{
-        font-size: 5em;
+}
+p, h1, h2, h3, h4, h5, h6{
+    color: white;
+}
+
+.win-color{
+    animation: win-anim 1.5s ease-in infinite;
+}
+@keyframes win-anim {
+    0% {
+        background-color: #00FF00;
+    }
+    50% {
+        background-color: initial;
+    }
+    100% {
+        background-color: #00FF00;
+    }
+}
+
+.draw-color{
+    animation: draw-anim 1.5s ease-in infinite;
+}
+@keyframes draw-anim {
+    0% {
+        background-color: #ffc955;
+    }
+    50% {
+        background-color: initial;
+    }
+    100% {
+        background-color: #ffc955;
     }
 }
